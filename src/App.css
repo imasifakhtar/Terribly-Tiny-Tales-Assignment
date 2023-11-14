@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: black;
+}
+
+#course {
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: #ffc23e;
+  border: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+/* .profile {
+    padding: 0 30px;
+} */
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.user img {
+    border-radius: 50%;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.follow {
+  display: flex;
+  gap: 10px;
+}
+
+.fl-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.fl-btn span {
+    font-size: 14px;
+    color: rgb(148, 148, 148);
+}
+
+.fl-btn button {
+    padding: 7px 20px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 2px solid rgb(175, 175, 175);
+    color: rgb(148, 148, 148);
+}
+
+.about {
+    padding: 10px 30px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-posts {
+  border-top: 1px solid black;
+  padding: 0 20px;
+}
+
+.post-count {
+  color: rgba(0, 179, 255, 0.915);
+  padding: 10px 0;
+}
+
+.post {
+  line-height: 1.4;
+  padding-bottom: 15px;
+}

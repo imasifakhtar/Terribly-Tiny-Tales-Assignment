@@ -1,0 +1,26 @@
+{
+    "fullName": "John Doe",
+    "followersCount": 500,
+    "followingCount": 300,
+    "about": "Co-founder & CEO at Terribly Tiny Tales.",
+    "url": "https://www.instagram.com/anujgosalia",
+    "likes": 1500,
+    "stars": 700,
+    "views": 2000,
+    "hearts": 1200,
+    "posts": [
+      {
+        "heading": "First Post",
+        "body": "This is the content of the first post."
+      },
+      {
+        "heading": "Second Post",
+        "body": "This is the content of the second post."
+      },
+      {
+        "heading": "Third Post",
+        "body": "This is the content of the third post."
+      }
+    ]
+  }
+  
