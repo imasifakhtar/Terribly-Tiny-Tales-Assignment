@@ -77,9 +77,14 @@ button:hover {
     padding: 10px 30px;
 }
 
-.stats {
+.statContainer {
     display: flex;
     justify-content: space-between;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
 }
 
 .user-posts {

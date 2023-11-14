@@ -38,21 +38,21 @@ const Profile = ({ userData }) => {
           <p>{userData.about}</p>
           <p>{userData.url}</p>
 
-          <div className="stats">
-            <div className="star">
-              <AiFillStar />
+          <div className="statContainer">
+            <div className="stat">
+              <AiFillStar color="#1DA1F2"/>
               <span>{userData.stars}</span>
             </div>
-            <div className="like">
-              <AiTwotoneLike />
+            <div className="stat">
+              <AiTwotoneLike color="#f9c935"/>
               <span>{userData.likes}</span>
             </div>
-            <div className="view">
-              <AiFillEye />
+            <div className="stat">
+              <AiFillEye color="#808080"/>
               <span>{userData.views}</span>
             </div>
-            <div className="heart">
-              <AiFillHeart />
+            <div className="stat">
+              <AiFillHeart color="#ff0050"/>
               <span>{userData.hearts}</span>
             </div>
           </div>
