@@ -4,12 +4,26 @@
   "followingCount": 300,
   "about": "Co-founder & CEO at Terribly Tiny Tales.",
   "url": "https://www.instagram.com/anujgosalia",
-  "statIcons": [
+  "statsData": [
     {
-      "stars": "AiFillStar",
-      "likes": "AiTwotoneLike",
-      "viwes": "AiFillEye",
-      "hearts": "AiFillHeart"
+      "icon": "AiFillStar",
+      "color": "#1DA1F2",
+      "count": 700
+    },
+    {
+      "icon": "AiTwotoneLike",
+      "color": "#f9c935",
+      "count": 1500
+    },
+    {
+      "icon": "AiFillEye",
+      "color": "#808080",
+      "count": 2000
+    },
+    {
+      "icon": "AiFillHeart",
+      "color": "#ff0050",
+      "count": 1200
     }
   ],
   "likes": 1500,
@@ -18,16 +32,16 @@
   "hearts": 1200,
   "posts": [
     {
-      "heading": "First Post",
-      "body": "This is the content of the first post."
+      "heading": "A Changing World Order",
+      "body": "The world is changing at a feverish pace. Friends, collegues and everyone engaged in knowledge work are beginning to sense this, including"
     },
     {
-      "heading": "Second Post",
-      "body": "This is the content of the second post."
+      "heading": "India v/s Austrilia",
+      "body": "Think about it - this cricket series was akin to therapy.<br> <br> Laying our childhood trauma up top, working with it slowly and surely over two m"
     },
     {
       "heading": "Third Post",
-      "body": "This is the content of the third post."
+      "body": "Writing is the first step to create: <br><br> -stories <br> - products <br> - companies"
     }
   ]
 }

@@ -32,20 +32,27 @@ button:hover {
     padding: 0 30px;
 } */
 
-.user {
+.user-profile {
+  position: relative;
+}
+
+.cover-picture {
+  position: relative;
+  z-index: 1;
+}
+
+.profile-overlay {
   display: flex;
   align-items: center;
   gap: 30px;
   padding: 0 20px;
+  margin-top: -25px;
 }
 
-.user img {
-    border-radius: 50%;
-}
-
-.info {
-  display: flex;
-  flex-direction: column;
+.profile-overlay img {
+  z-index: 99;
+  border-radius: 50%;
+  border: 2px solid rgb(148, 148, 148);
 }
 
 .follow {
@@ -60,35 +67,46 @@ button:hover {
   text-align: center;
 }
 
-.fl-btn span {
-    font-size: 14px;
-    color: rgb(148, 148, 148);
+.fl-btn h3 {
+  padding: 5px 20px;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 2px solid rgb(175, 175, 175);
+  color: rgb(148, 148, 148);
 }
 
-.fl-btn button {
-    padding: 7px 20px;
-    background-color: transparent;
-    border-radius: 5px;
-    border: 2px solid rgb(175, 175, 175);
-    color: rgb(148, 148, 148);
+.fl-btn span {
+  font-size: 14px;
+  color: rgb(148, 148, 148);
 }
 
 .about {
-    padding: 10px 30px;
+  padding: 10px 30px;
+}
+
+.about p {
+  padding-bottom: 5px;
+}
+
+.about a {
+  text-decoration: none;
 }
 
 .statContainer {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  width: 75%;
 }
 
 .stat {
   display: flex;
   align-items: center;
+  gap: 5px;
 }
 
 .user-posts {
-  border-top: 1px solid black;
+  border-top: 1px solid rgba(0, 0, 0, 0.212);
   padding: 0 20px;
 }
 
@@ -100,4 +118,10 @@ button:hover {
 .post {
   line-height: 1.4;
   padding-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.212);
 }
+
+/* .post p {
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.212);
+} */
