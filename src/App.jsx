@@ -25,7 +25,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <Profile userData={userData} />
+      <Profile totalPosts={totalPosts} userData={userData} />
     </>
   );
 }

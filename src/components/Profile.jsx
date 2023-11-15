@@ -5,14 +5,15 @@ import {
   AiFillEye,
   AiFillHeart,
 } from "react-icons/ai";
+import Post from "./Post";
 
-const Profile = ({ userData }) => {
+const Profile = ({ userData, totalPosts }) => {
   const renderProfileOverlay = () => {
     if (!userData) return null;
 
     return (
       <div className="profile-overlay">
-        <img src="https://picsum.photos/150" alt="profile-pic" />
+        <img src="https://picsum.photos/115" alt="profile-pic" />
         <div className="details">
           <h3>{userData.fullName}</h3>
           <div className="follow">
@@ -72,11 +73,11 @@ const Profile = ({ userData }) => {
 
     return (
       <div className="user-posts">
-        <div className="post-count">236 Posts</div>
+        <div className="post-count">{totalPosts} Posts</div>
         {userData.posts.map((post, i) => (
           <div key={i} className="post">
-            <h2>{post.heading}</h2>
-            <p>{post.body}</p>
+            <h3>{post.heading}</h3>
+            <Post content={post.body} />
           </div>
         ))}
       </div>
@@ -86,7 +87,7 @@ const Profile = ({ userData }) => {
   return (
     <div className="user-profile">
       <div className="cover-picture">
-        <img src="https://picsum.photos/455/250" alt="cover-pic" />
+        <img src="https://picsum.photos/455/200" alt="cover-pic" />
       </div>
 
       {renderProfileOverlay()}
