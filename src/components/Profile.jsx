@@ -6,6 +6,8 @@ import {
   AiFillHeart,
 } from "react-icons/ai";
 import Post from "./Post";
+import dp from '../assets/dp.jpg';
+import cover from '../assets/cover.jpg';
 
 const Profile = ({ userData, totalPosts }) => {
   const renderProfileOverlay = () => {
@@ -13,7 +15,7 @@ const Profile = ({ userData, totalPosts }) => {
 
     return (
       <div className="profile-overlay">
-        <img src="https://picsum.photos/155" alt="profile-pic" />
+        <img src={dp} alt="profile-pic" />
         <div className="details">
           <h3>{userData.fullName}</h3>
           <div className="follow">
@@ -91,7 +93,7 @@ const Profile = ({ userData, totalPosts }) => {
   return (
     <div className="user-profile">
       <div className="cover-picture">
-        <img src="https://picsum.photos/1200/300" alt="cover-pic" />
+        <img src={cover} alt="cover-pic" />
       </div>
 
       {renderProfileOverlay()}

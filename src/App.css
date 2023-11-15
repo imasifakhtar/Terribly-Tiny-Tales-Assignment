@@ -112,6 +112,7 @@ button:hover {
 
 .about {
   padding: 0 30px;
+  margin-top: 15px;
 }
 
 .about p {
@@ -125,7 +126,7 @@ button:hover {
 .statContainer {
   display: flex;
   justify-content: space-between;
-  padding-top: 10px;
+  padding: 15px 0;
   width: 75%;
 }
 
@@ -183,6 +184,7 @@ button:hover {
   
   .cover-picture img {
     border-radius: 0 0 10px 10px;
+    width: 80%;
   }
 
   .profile-overlay {
@@ -200,6 +202,8 @@ button:hover {
 
   .user-posts {
     /* padding: 0 20%; */
-    margin: 0 11%;
+    margin: 0 15%;
   }
+
+  
 }
