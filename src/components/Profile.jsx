@@ -13,7 +13,7 @@ const Profile = ({ userData, totalPosts }) => {
 
     return (
       <div className="profile-overlay">
-        <img src="https://picsum.photos/115" alt="profile-pic" />
+        <img src="https://picsum.photos/155" alt="profile-pic" />
         <div className="details">
           <h3>{userData.fullName}</h3>
           <div className="follow">
@@ -78,6 +78,10 @@ const Profile = ({ userData, totalPosts }) => {
           <div key={i} className="post">
             <h3>{post.heading}</h3>
             <Post content={post.body} />
+            <div className="post-details">
+              <p><span>{post.category}</span> by {post.author}</p>
+              <p>{post.date}  ·  {post.minutes} min Read  ·  {post.views} Views</p>
+            </div>
           </div>
         ))}
       </div>
@@ -87,7 +91,7 @@ const Profile = ({ userData, totalPosts }) => {
   return (
     <div className="user-profile">
       <div className="cover-picture">
-        <img src="https://picsum.photos/455/200" alt="cover-pic" />
+        <img src="https://picsum.photos/1200/300" alt="cover-pic" />
       </div>
 
       {renderProfileOverlay()}

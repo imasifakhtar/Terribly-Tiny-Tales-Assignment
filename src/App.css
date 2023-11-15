@@ -8,7 +8,7 @@
 @font-face {
   font-family: 'SF Regular';
   src: url('../public/fonts/SF_Pro_Display_Regular.otf') format('opentype');
-  font-weight: bold;
+  font-weight: normal;
   font-style: normal;
 }
 
@@ -22,6 +22,11 @@ html,
 body {
   height: 100%;
   width: 100%;
+  overflow-x: hidden;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 .navbar {
@@ -39,9 +44,6 @@ body {
   border: none;
 }
 
-button:hover {
-  cursor: pointer;
-}
 
 .user-profile {
   position: relative;
@@ -60,7 +62,12 @@ button:hover {
   padding: 0 20px;
   height: 20vh;
   margin-top: -25px;
+  /* background-color: rgba(240, 240, 240, 0.8); */
 }
+
+/* .cover-picture, .profile-overlay, .about {
+  background-color: rgba(240, 240, 240, 0.8);
+} */
 
 .details {
   display: flex;
@@ -92,7 +99,6 @@ button:hover {
 
 .fl-btn h3 {
   padding: 5px 20px;
-  background-color: transparent;
   border-radius: 7px;
   border: 2px solid rgb(175, 175, 175);
   color: rgb(148, 148, 148);
@@ -105,7 +111,7 @@ button:hover {
 }
 
 .about {
-  padding: 5px 30px 40px 30px;
+  padding: 0 30px;
 }
 
 .about p {
@@ -132,6 +138,7 @@ button:hover {
 .user-posts {
   border-top: 1px solid rgba(0, 0, 0, 0.212);
   padding: 0 20px;
+  /* background-color: rgba(240, 240, 240, 0.921); */
 }
 
 .post-count {
@@ -149,8 +156,50 @@ button:hover {
   font-family: 'SF Bold', sans-serif;
 }
 
+.post-details {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  font-size: 13px;
+  color: darkgrey;
+}
+
+.post-details span {
+  color: rgba(0, 179, 255, 0.915);
+}
+
 .read-more {
   background: transparent;
   border: none;
   color: rgba(0, 179, 255, 0.915);
+}
+
+@media (min-width: 768px) {
+  .cover-picture {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+  }
+  
+  .cover-picture img {
+    border-radius: 0 0 10px 10px;
+  }
+
+  .profile-overlay {
+    padding: 0 20%;
+  }
+  
+  .about {
+    padding: 0 32.5%;
+  }
+
+  .statContainer {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+
+  .user-posts {
+    /* padding: 0 20%; */
+    margin: 0 11%;
+  }
 }
