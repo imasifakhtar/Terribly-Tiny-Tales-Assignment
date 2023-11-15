@@ -10,7 +10,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('../../public/data/data.json');
+        const response = await fetch('https://server.asifakhtar.me/api/data.json');
         const data = await response.json();
         setUserData(data);
         setTotalPosts(data.posts.length);
