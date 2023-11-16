@@ -6,6 +6,7 @@ import Profile from "./components/Profile";
 function App() {
   const [userData, setUserData] = useState(null);
   const [totalPosts, setTotalPosts] = useState(0);
+  const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -23,10 +24,10 @@ function App() {
   }, []);
 
   return (
-    <>
-      <Navbar />
+    <div className='App' data-theme={isDark ? "dark" : "light"}>
+      <Navbar isDark={isDark} handleChange={() => {setIsDark(!isDark)}} />
       <Profile totalPosts={totalPosts} userData={userData} />
-    </>
+    </div>
   );
 }
 
