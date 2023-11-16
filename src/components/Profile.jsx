@@ -5,9 +5,11 @@ import {
   AiFillEye,
   AiFillHeart,
 } from "react-icons/ai";
+import { MdVerified } from "react-icons/md";
+import { RiCopperDiamondFill } from "react-icons/ri";
 import Post from "./Post";
-import dp from '../assets/dp.jpg';
-import cover from '../assets/cover.jpg';
+import dp from "../assets/dp.jpg";
+import cover from "../assets/cover.jpg";
 
 const Profile = ({ userData, totalPosts }) => {
   const renderProfileOverlay = () => {
@@ -17,18 +19,23 @@ const Profile = ({ userData, totalPosts }) => {
       <div className="profile-overlay">
         <img src={dp} alt="profile-pic" />
         <div className="details">
-          <h3>{userData.fullName}</h3>
-          <div className="follow">
-            <div className="fl-btn">
-              <h3>{userData.followersCount}</h3>
-              <span>Followers</span>
-            </div>
-            <div className="fl-btn">
-              <h3>{userData.followingCount}</h3>
-              <span>Following</span>
+          <div className="username flex">
+            <h3>{userData.fullName}</h3>
+            {userData.isPremium && <span><RiCopperDiamondFill color="#833AB4"/></span>}
+            {userData.isVerified && <span><MdVerified color="#1DB954"/></span>}
+
+          </div>
+            <div className="follow">
+              <div className="fl-count">
+                <h3>{userData.followersCount}</h3>
+                <span>Followers</span>
+              </div>
+              <div className="fl-count">
+                <h3>{userData.followingCount}</h3>
+                <span>Following</span>
+              </div>
             </div>
           </div>
-        </div>
       </div>
     );
   };
@@ -51,22 +58,22 @@ const Profile = ({ userData, totalPosts }) => {
   const renderAboutSection = () => {
     if (!userData) return null;
     return (
-      <div className="about">
-        <div className="bio">
-          <p>{userData.about}</p>
-          <a href={userData.url} id="bio-link">
-            {userData.url}
-          </a>
-        </div>
-        <div className="statContainer">
-          {userData.statsData.map((stat, index) => (
-            <div key={index} className="stat">
-              {getIconComponent(stat.icon, stat.color)}
-              <span>{stat.count}</span>
+         <div className="about">
+            <div className="bio">
+              <p>{userData.about}</p>
+              <a href={userData.url} id="bio-link">
+                {userData.url}
+              </a>
             </div>
-          ))}
-        </div>
-      </div>
+            <div className="statContainer">
+              {userData.statsData.map((stat, index) => (
+                <div key={index} className="stat">
+                  {getIconComponent(stat.icon, stat.color)}
+                  <span>{stat.count}</span>
+                </div>
+              ))}
+            </div>
+          </div>
     );
   };
 
@@ -74,15 +81,19 @@ const Profile = ({ userData, totalPosts }) => {
     if (!userData) return null;
 
     return (
-      <div className="user-posts">
-        <div className="post-count">{totalPosts} Posts</div>
+      <div className="user-posts fl-col">
+        <span className="post-count">{totalPosts} Posts</span>
         {userData.posts.map((post, i) => (
           <div key={i} className="post">
             <h3>{post.heading}</h3>
             <Post content={post.body} />
             <div className="post-details">
-              <p><span>{post.category}</span> by {post.author}</p>
-              <p>{post.date}  ·  {post.minutes} min Read  ·  {post.views} Views</p>
+              <p>
+                <span>{post.category}</span> by {post.author}
+              </p>
+              <p>
+                {post.date} · {post.minutes} min Read · {post.views} Views
+              </p>
             </div>
           </div>
         ))}

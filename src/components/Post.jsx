@@ -16,7 +16,7 @@ const Post = ({ content }) => {
       const truncatedContent = wordsArray.slice(0, 30).join(" ");
       return (
         <>
-          {truncatedContent} ...
+          {truncatedContent}...
           <button className="read-more" onClick={toggleExpand}>
             {isExpanded ? "Read Less" : "Read More"}
           </button>
@@ -26,7 +26,7 @@ const Post = ({ content }) => {
   };
 
   return (
-      <p>{renderContent()}</p>
+      <p className="post-body">{renderContent()}</p>
   );
 };
 
