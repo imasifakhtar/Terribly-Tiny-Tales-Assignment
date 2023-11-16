@@ -1,3 +1,4 @@
+/* Font Faces */
 @font-face {
   font-family: "SF Bold";
   src: url("./fonts/SF-Pro-Display-Bold.otf") format("opentype");
@@ -12,28 +13,36 @@
   font-style: normal;
 }
 
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html,
-body {
+/* General */
+html, body {
   height: 100%;
   width: 100%;
 }
 
-button:hover {
+/* Buttons */
+button:hover, .read-more {
   cursor: pointer;
+  background: transparent;
+  border: none;
+  color: rgba(0, 179, 255, 0.915);
+  font-size: 0.9rem;
 }
 
+/* Navbar */
 .navbar {
   justify-content: space-between;
   padding: 15px;
   background-color: #000000;
 }
 
+/* Course Button */
 #course {
   font-family: "SF Bold", sans-serif;
   padding: 10px 15px;
@@ -44,6 +53,7 @@ button:hover {
   font-size: 0.9rem;
 }
 
+/* User Profile */
 .user-profile {
   position: relative;
   font-family: "SF Regular", sans-serif;
@@ -51,23 +61,19 @@ button:hover {
 }
 
 .cover-picture {
-  background-color: #fff;
   text-align: center;
+  background-color: #fff;
 }
 
 .cover-picture img {
-  height: 30vh;
   width: 100%;
+  height: 30vh;
   border-radius: 0 0 10px 10px;
 }
 
 .profile-overlay {
   position: relative;
   background-color: #fff;
-}
-
-.details {
-  padding-left: 45%;
 }
 
 .profile-overlay img {
@@ -79,46 +85,53 @@ button:hover {
   border: 3px solid #ffffff;
 }
 
+/* Details */
+.details {
+  padding-left: 180px;
+}
+
 .details h3 {
   font-family: "SF Bold", sans-serif;
   padding-bottom: 5px;
 }
 
+/* Follow */
 .follow {
   display: flex;
   gap: 10px;
 }
 
+/* Follow Count */
 .fl-count {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  color: rgb(148, 148, 148);
 }
 
 .fl-count h3 {
   padding: 5px 20px;
   border-radius: 7px;
   border: 2px solid rgb(175, 175, 175);
-  color: rgb(148, 148, 148);
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .fl-count span {
-  font-size: 14px;
-  color: rgb(148, 148, 148);
+  font-size: 0.8rem;
 }
 
+/* Username */
 .username {
   align-items: center;
   gap: 5px;
 }
 
+/* About */
 .about {
   padding: 0 30px;
   background-color: #fff;
-  padding-top: 1.5rem;
-  box-shadow: 0px 9px 11px -14px rgba(0,0,0,0.3);
+  padding-top: 1.6rem;
 }
 
 .about p {
@@ -129,18 +142,29 @@ button:hover {
   text-decoration: none;
 }
 
+/* Stat Container */
 .statContainer {
   display: flex;
   justify-content: space-between;
   padding: 15px 0;
 }
 
+/* Stat */
 .stat {
   display: flex;
   align-items: center;
   gap: 5px;
 }
 
+.stat span {
+  font-size: .9rem;
+}
+
+.stat:hover {
+  cursor: pointer;
+}
+
+/* User Posts */
 .user-posts {
   background-color: #f0f2f5;
   gap: 15px;
@@ -152,32 +176,36 @@ button:hover {
   padding-top: 10px;
 }
 
+/* Post */
 .post {
   line-height: 1.4;
   padding: 15px;
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   background: #fff;
   border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .post:last-child {
   margin-bottom: 20px;
 }
 
+/* Heading */
 .heading {
   align-items: center;
   justify-content: space-between;
 }
 
+/* Post Body */
 .post-body {
   font-size: 1rem;
-  color: #050505;
+  color: #515151;
+  padding: 10px 0;
 }
 
+/* Post Details */
 .post-details {
   display: flex;
   justify-content: space-between;
-  padding: 10px 0;
   color: darkgrey;
 }
 
@@ -189,14 +217,8 @@ button:hover {
   color: rgba(0, 179, 255, 0.915);
 }
 
-.read-more {
-  background: transparent;
-  border: none;
-  color: rgba(0, 179, 255, 0.915);
-  font-size: 14px;
-}
-
-@media (min-width: 768px) {
+/* Media Queries */
+@media (min-width: 992px) {
   .cover-picture img {
     width: 70%;
     height: 35vh;
@@ -211,7 +233,7 @@ button:hover {
   }
 
   .details {
-    padding-left: 15%;
+    padding-left: 150px;
   }
 
   .about {
@@ -223,14 +245,16 @@ button:hover {
   }
 
   .user-posts {
-    margin: 0 18.5%;
+    margin: 0 18.7%;
   }
 }
 
+/* Flexbox */
 .flex {
   display: flex;
 }
 
+/* Flex Column */
 .fl-col {
   display: flex;
   flex-direction: column;

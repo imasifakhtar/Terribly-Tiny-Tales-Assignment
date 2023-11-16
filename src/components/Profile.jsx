@@ -40,20 +40,20 @@ const Profile = ({ userData, totalPosts }) => {
     );
   };
 
-  const getIconComponent = (icon, color) => {
-    switch (icon) {
-      case "AiFillStar":
-        return <AiFillStar color={color} />;
-      case "AiTwotoneLike":
-        return <AiTwotoneLike color={color} />;
-      case "AiFillEye":
-        return <AiFillEye color={color} />;
-      case "AiFillHeart":
-        return <AiFillHeart color={color} />;
-      default:
-        return null;
-    }
+  const IconComponents = {
+    AiFillStar: AiFillStar,
+    AiTwotoneLike: AiTwotoneLike,
+    AiFillEye: AiFillEye,
+    AiFillHeart: AiFillHeart,
   };
+
+  const getIconComponent = (icon, color) => {
+  const IconComponent = IconComponents[icon];
+  if (IconComponent) {
+    return <IconComponent color={color} />;
+  }
+  return null;
+};
 
   const renderAboutSection = () => {
     if (!userData) return null;
