@@ -64,20 +64,19 @@ button:hover {
 .profile-overlay {
   position: relative;
   background-color: #fff;
-  /* gap: 30px; */
 }
 
 .details {
-  padding-left: 40%;
+  padding-left: 45%;
 }
 
 .profile-overlay img {
   position: absolute;
-  height: 120px;
+  height: 130px;
   left: 5%;
-  top: -30%;
+  top: -40%;
   border-radius: 50%;
-  border: 2px solid #ffffff;
+  border: 3px solid #ffffff;
 }
 
 .details h3 {
@@ -116,7 +115,7 @@ button:hover {
 }
 
 .about {
-  padding: 0 20px;
+  padding: 0 30px;
   background-color: #fff;
   padding-top: 1.5rem;
   box-shadow: 0px 9px 11px -14px rgba(0,0,0,0.3);
@@ -145,7 +144,7 @@ button:hover {
 .user-posts {
   background-color: #f0f2f5;
   gap: 15px;
-  padding: 0 20px;
+  padding: 0 15px;
 }
 
 .post-count {
@@ -165,8 +164,9 @@ button:hover {
   margin-bottom: 20px;
 }
 
-.post h3 {
-  font-family: "SF Bold", sans-serif;
+.heading {
+  align-items: center;
+  justify-content: space-between;
 }
 
 .post-body {
@@ -198,7 +198,7 @@ button:hover {
 
 @media (min-width: 768px) {
   .cover-picture img {
-    width: 68%;
+    width: 70%;
     height: 35vh;
   }
 
@@ -208,6 +208,10 @@ button:hover {
 
   .profile-overlay img {
     left: 20%;
+  }
+
+  .details {
+    padding-left: 15%;
   }
 
   .about {
