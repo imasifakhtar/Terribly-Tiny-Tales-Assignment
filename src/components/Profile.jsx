@@ -82,7 +82,7 @@ const Profile = ({ userData, totalPosts }) => {
 
     return (
       <div className="user-posts fl-col">
-        <span className="post-count">{totalPosts} Posts</span>
+        <p className="post-count">{totalPosts} Posts</p>
         {userData.posts.map((post, i) => (
           <div key={i} className="post">
             <div className="heading flex">

@@ -14,7 +14,7 @@
 }
 
 :root {
-  --bg-gray-color: #f0f2f5;
+  --bg-gray-color: #fff;
   --yellow-color: #ffc23e;
   --post-bg-color: #fff;
   --blue-color: rgba(0, 179, 255, 0.915);
@@ -30,12 +30,26 @@
 
 [data-theme="dark"] {
   --bg-gray-color: #242526;
-  --white-color: #3a3b3c;
+  --white-color: #242526;
 
   --black-color: #fff;
 
   --post-bg-color: #3a3b3c;
   --post-body: #fff;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General */
+html,
+body {
+  height: 100%;
+  width: 100%;
 }
 
 .navBtn {
@@ -79,20 +93,6 @@
 
 .toggle:checked + label::after {
   transform: translateX(100%);
-}
-
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* General */
-html,
-body {
-  height: 100%;
-  width: 100%;
 }
 
 .App {
@@ -141,8 +141,7 @@ button:hover,
 
 .cover-picture img {
   width: 100%;
-  height: 30vh;
-  border-radius: 0 0 10px 10px;
+  height: 23vh;
 }
 
 .profile-overlay {
@@ -152,7 +151,7 @@ button:hover,
 
 .profile-overlay img {
   position: absolute;
-  height: 130px;
+  height: 120px;
   left: 5%;
   top: -40%;
   border-radius: 50%;
@@ -161,7 +160,7 @@ button:hover,
 
 /* Details */
 .details {
-  padding-left: 180px;
+  padding-left: 160px;
 }
 
 .details h3 {
@@ -178,9 +177,6 @@ button:hover,
 
 /* Follow Count */
 .fl-count {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   text-align: center;
   color: var(--gray-color);
 }
@@ -206,7 +202,7 @@ button:hover,
 .about {
   padding: 0 30px;
   background-color: var(--white-color);
-  padding-top: 7%;
+  padding-top: 3%;
 }
 
 .about p {
@@ -247,6 +243,7 @@ button:hover,
   background-color: var(--bg-gray-color);
   gap: 15px;
   padding: 0 15px;
+  border-top: 1px solid var(--post-body);
 }
 
 .post-count {
@@ -257,10 +254,10 @@ button:hover,
 /* Post */
 .post {
   line-height: 1.4;
-  padding: 15px;
-  background: var(--post-bg-color);
+  /* padding: 15px; */
+  background: var(--bg-gray-color);
   border-radius: 5px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); */
 }
 
 .post:last-child {
@@ -298,10 +295,18 @@ button:hover,
 
 
 /* Media Queries */
+@media (min-width:  768px) {
+  .details {
+    padding-left: 180px;
+  }
+}
+
+
 @media (min-width: 992px) {
   .cover-picture img {
     width: 70%;
     height: 35vh;
+    border-radius: 0 0 10px 10px;
   }
 
   .profile-overlay {
