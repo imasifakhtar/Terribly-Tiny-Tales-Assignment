@@ -3,13 +3,13 @@ import Toggle from "./Toggle";
 
 const Navbar = ({ isDark, handleChange }) => {
   return (
-    <div className="navbar flex">
+    <nav className="navbar flex">
       <img src={logo} alt="logo" />
       <div className="navBtn">
         <Toggle handleChange={handleChange} isChecked={isDark} /> {/* Pass isChecked prop */}
         <button id="course">Courses</button>
       </div>
-    </div>
+    </nav>
   );
 };
 

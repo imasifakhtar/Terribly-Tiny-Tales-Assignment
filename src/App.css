@@ -24,8 +24,8 @@
   --white-color: #ffffff;
   --post-body: #515151;
 
-  --toggle-bg: #f0eb9d;
-  --toggle-fg: #ffd000;
+  --toggle-bg: #e9e9e9;
+  --toggle-fg: #f9e487;
 }
 
 [data-theme="dark"] {
@@ -36,6 +36,9 @@
 
   --post-bg-color: #3a3b3c;
   --post-body: #fff;
+
+  --toggle-bg: #f3d652;
+  --toggle-fg: #e9e9e9;
 }
 
 /* Reset */
@@ -318,13 +321,17 @@ button:hover,
   .details {
     padding-left: 180px;
   }
+
+  .cover-picture img {
+    height: 40vh;
+  }
 }
 
 
 @media (min-width: 992px) {
   .cover-picture img {
     width: 70%;
-    height: 35vh;
+    height: 40vh;
     border-radius: 0 0 10px 10px;
   }
 

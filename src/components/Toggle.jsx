@@ -2,7 +2,7 @@ import React from "react";
 
 const Toggle = ({ handleChange, isChecked }) => {
   return (
-    <div className="toggleContainer flex">
+    <div className="flex">
       <input
         type="checkbox"
         id="toggle"
