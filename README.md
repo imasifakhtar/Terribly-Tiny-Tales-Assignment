@@ -27,7 +27,7 @@ This repository contains a Vite-powered React application that showcases a user 
 Apologies for the confusion earlier. Here's the additional point for the README file regarding the structure and usage of the `data.json` file:
 
 ### User Data Source - `data.json`
-- **Local Data Storage**: The application's user-related data is stored within the `data.json` file, which contains details such as full name, follower and following counts, a brief bio, social URL, verification status, premium status, statistics data, and posts authored by the user.
+- **Local Data Storage**: The application's user-related data is stored within the `data.json` file located in public folder, which contains details such as full name, follower and following counts, a brief bio, social URL, verification status, premium status, statistics data, and posts authored by the user.
 
 The `data.json` file structure:
 
@@ -74,7 +74,7 @@ Please include this information in your README file to provide clarity on how th
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/your-username/vite-react-app.git
+   git clone https://github.com/imasifakhtar/Terribly-Tiny-Tales-Assignment.git
    ```
 
 2. **Install Dependencies**
@@ -88,7 +88,7 @@ Please include this information in your README file to provide clarity on how th
    ```
 
 4. **Access the Application**
-   Open your browser and go to `http://localhost:3000` to see the application.
+   Open your browser and go to `http://localhost:5173` to see the application.
 
 ## Styling Details
 
