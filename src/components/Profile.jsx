@@ -94,7 +94,7 @@ const Profile = ({ userData, totalPosts }) => {
         </div>
         {userData.posts.map((post, i) => (
           <div key={i} className="post">
-            <div className="body">
+            <div className="post-container">
               <div className="heading flex">
                 <h3>{post.heading}</h3>
                 <AiTwotoneLike color="#f9c935" />

@@ -244,9 +244,6 @@ button:hover,
   background-color: var(--bg-gray-color);
   gap: 15px;
   overflow-x: hidden;
-}
-
-.post-count {
   color: var(--blue-color);
 }
 
@@ -268,15 +265,15 @@ button:hover,
   width: calc(100vw + 20px);
 }
 
-.body {
-  padding: 0 20px;
-}
-
 /* Post */
 .post {
   line-height: 1.4;
   background: var(--bg-gray-color);
   border-bottom: 1px solid rgba(174, 174, 174, 0.6);
+}
+
+.post-container {
+  padding: 0 20px;
 }
 
 .post:last-child {
@@ -289,6 +286,7 @@ button:hover,
   align-items: center;
   justify-content: space-between;
   color: var(--black-color);
+  padding-top: 10px;
 }
 
 /* Post Body */
