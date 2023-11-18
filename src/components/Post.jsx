@@ -10,10 +10,10 @@ const Post = ({ content }) => {
   const renderContent = () => {
     const wordsArray = content.split(" ");
 
-    if (wordsArray.length <= 30 || isExpanded) {
+    if (wordsArray.length <= 25 || isExpanded) {
       return content;
     } else {
-      const truncatedContent = wordsArray.slice(0, 30).join(" ");
+      const truncatedContent = wordsArray.slice(0, 25).join(" ");
       return (
         <>
           {truncatedContent}...

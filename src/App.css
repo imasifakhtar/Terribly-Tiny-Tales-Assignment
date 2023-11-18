@@ -1,14 +1,14 @@
 /* Font Faces */
 @font-face {
   font-family: "SF Bold";
-  src: url("./fonts/SF-Pro-Display-Bold.otf") format("opentype");
+  src: url("./fonts/SaldaBold.otf") format("opentype");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: "SF Regular";
-  src: url("./fonts/SF_Pro_Display_Regular.otf") format("opentype");
+  src: url("./fonts/SaldaRegular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
@@ -161,6 +161,7 @@ button:hover,
 /* Details */
 .details {
   padding-left: 160px;
+  padding-top: 5px;
 }
 
 .details h3 {
@@ -207,7 +208,7 @@ button:hover,
 
 .about p {
   padding-bottom: 5px;
-  color: var(--black-color);
+  color: var(--post-body);
 }
 
 .about a {
@@ -242,27 +243,46 @@ button:hover,
 .user-posts {
   background-color: var(--bg-gray-color);
   gap: 15px;
-  padding: 0 15px;
-  border-top: 1px solid var(--post-body);
+  overflow-x: hidden;
 }
 
 .post-count {
   color: var(--blue-color);
-  padding-top: 10px;
+}
+
+.counter {
+  position: relative;
+  width: fit-content;
+  border-top: 1px solid rgba(174, 174, 174, 0.6);
+  border-right: 1px solid rgba(174, 174, 174, 0.6);
+  padding: 10px 20px;
+  border-radius: 0 5px 0 0;
+}
+
+.counter::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 100%;
+  border-bottom: 1px solid rgba(174, 174, 174, 0.6); /* Line extending to the end of the screen */
+  width: calc(100vw + 20px);
+}
+
+.body {
+  padding: 0 20px;
 }
 
 /* Post */
 .post {
   line-height: 1.4;
-  /* padding: 15px; */
   background: var(--bg-gray-color);
-  border-radius: 5px;
-  /* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); */
+  border-bottom: 1px solid rgba(174, 174, 174, 0.6);
 }
 
 .post:last-child {
   margin-bottom: 20px;
 }
+
 
 /* Heading */
 .heading {
@@ -273,9 +293,9 @@ button:hover,
 
 /* Post Body */
 .post-body {
-  font-size: 1rem;
+  font-size: 15px;
   color: var(--post-body);
-  padding: 10px 0;
+  padding: 20px 0;
 }
 
 /* Post Details */
@@ -283,6 +303,7 @@ button:hover,
   display: flex;
   justify-content: space-between;
   color: darkgrey;
+  padding-bottom: 20px;
 }
 
 .post-details p {
