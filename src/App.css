@@ -1,14 +1,14 @@
 /* Font Faces */
 @font-face {
   font-family: "SF Bold";
-  src: url("./fonts/SaldaBold.otf") format("opentype");
+  src: url("../fonts/SaldaBold.otf") format("opentype");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: "SF Regular";
-  src: url("./fonts/SaldaRegular.otf") format("opentype");
+  src: url("../fonts/SaldaRegular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
